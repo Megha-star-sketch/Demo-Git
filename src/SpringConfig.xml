@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is an important file -->
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+  
+  <bean id="add" class="co.spring.Address">  
+<property name="city" value="Prem vihar"></property>
+<property name="state" value="DELHI"></property>
+<property name="zipcode" value="110094"></property>  
+</bean>
+  
+<bean id="demo1" class="co.spring.Demo1" init-method="myInit" destroy-method="myDestroy">  
+<property name="eid" value="421"></property>
+<property name="name" value="Megha"></property>
+<constructor-arg ref="add"/>
+</bean>  
+
+<!--  <bean id="demo2" class="co.spring.Demo1">  
+<property name="eid" value="029"></property>
+<property name="name" value="Mr. Chaudhary"></property>
+<property name="address" value="Rohini"></property>  
+</bean>  -->
+  
+</beans>  
